@@ -1,7 +1,10 @@
+console.warn('script 1');
+
+
 const bikes = [
     {
         type: "road bike",
-        weight: 9,
+        weight: 20,
     },
     {
         type: " mountain bike",
@@ -16,8 +19,12 @@ const bikes = [
         weight: 7,
     }
 ];
-for (let i = 0; i < bikes.length; i++) {
-    let minorBicicle = bikes[0];
-    if (bikes[i].weight <  minorBicicle.weight)
-    console.log(`la ${bikes[i].type} ha il minor peso che è equivalente a ${bikes[i].weight}kg`)
+let minorBicicle = bikes[0];
+for (let i = 1; i < bikes.length; i++) {
+    
+    if (bikes[i].weight <  minorBicicle.weight) {
+        minorBicicle = bikes[i]
+    }
+    
 }
+console.log(`la ${minorBicicle.type} ha il minor peso che è equivalente a ${minorBicicle.weight}kg`)
