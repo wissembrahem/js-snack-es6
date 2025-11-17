@@ -24,12 +24,12 @@ const classifica = [
 ]
 
 function randomPoints(min,max) {
-    return Math.floor(Math.random() * (min, max));
+    return Math.floor(Math.random() * (min, max))
 }
 
 for (let i = 0; i < classifica.length; i++) {
     classifica[i].puntiFatti = randomPoints(0,60);
-    classifica[i].falliSubiti = randomPoints(0,30);
+    classifica[i].falliSubiti = randomPoints(0,30)
     
 }
 console.log(classifica)
